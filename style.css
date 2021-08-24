@@ -1,13 +1,12 @@
 @charset "UTF-8";
 @import url('https://fonts.googleapis.com/css2?family=Bree+Serif&family=Fredericka+the+Great&display=swap');
 
-
 /*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-
 全ページ共通
 *-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*-*/
 
 /*-* 初期設定 *-*-*-*-*-*-*-*-*-*-*-*/
-body,header,nav,main,footer,div,section,ul,li,th,td,dl,dd,h3{
+body,header,nav,main,footer,div,section,p,ul,li,th,td,dl,dd,h3{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -16,7 +15,6 @@ body,header,nav,main,footer,div,section,ul,li,th,td,dl,dd,h3{
 /* 見出し２ */
 h2{
   margin-top: 50px;
-  padding-bottom: 10px;
   border-bottom: 2px dashed rgb(153, 102, 102);
 }
 
@@ -50,12 +48,12 @@ table{
 
 /* リンク */
 a{
-  color: rgb(0, 0, 0);
+  color: rgb(102, 51, 51);
   text-decoration: none;
 }
 
 a:hover{
-  color: rgb(102, 102, 102);
+  color: rgb(51, 0, 0);
 }
 
 /* TOPに戻るリンク */
@@ -81,12 +79,16 @@ a:hover{
 
 /* ボディ */
 body{
+  background-color: rgba(153, 102, 102, 0.1);
+  color: rgb(102, 51, 51);
   font-size: 1.6rem;
 }
 
 /*-* 中央揃え *-*-*-*-*-*-*-*-*-*-*-*/
 #wrapper{
   margin: 0 auto;
+  background-color: rgb(255, 255, 255);
+  padding-bottom: 50px;
 }
 
 /*-* ヘッダー *-*-*-*-*-*-*-*-*-*-*-*/
@@ -131,24 +133,105 @@ nav a:hover{
 }
 
 #profile>div>img{
-  width: 200px;
-  height: 200px;
   border-radius: 50%;
-  margin-right: 30px;
 }
 
-#profile dl>dt:nth-child(4){
+#profile dl>dt:nth-child(4),#profile p{
   margin-top: 15px;
 }
 
-#profile p{
-  margin-top: 10px;
+#profile #more_c{
+  margin: 30px auto 0 auto;
+}
+
+#more_p,#more_c{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  width: 60px;
+  height: 60px;
+  background-color: rgb(153, 102, 102);
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  border-radius: 50%;
+  color: rgb(255, 255, 255);
+  font: normal 1.8rem 'Fredericka the Great', cursive;
+}
+
+#more_p:hover,#more_c:hover{
+  cursor: pointer;
+}
+
+#profile>#more_d>#more_p{
+  margin-top: 0;
+}
+
+#profile>#more_d{
+  display: flex;
+  align-items:center;
+  justify-content:center;
+  margin-top: 30px;
+}
+
+.onnone{
+  display: none;
+}
+
+#morearea{
+  width: 80%;
+  margin: 30px auto 0 auto;
+}
+
+#morearea>h3{
+  text-align: right;
+}
+
+#morearea>div:nth-child(2){
+  margin: 5px auto 0 auto;
+  border: 1px solid rgb(204, 204, 204);
+  background-image: url(images/p_w.jpg);
+  box-shadow: 2px 2px 2px rgb(204, 204, 204);
+  background-size: cover;
+  padding: 0 15px 15px 15px;
+}
+
+#morearea span{
+  color: rgb(204, 0, 0);
+}
+
+.pspan{
+  margin: 10px;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+
+#morearea>dl>dt{
+  margin: 25px auto 0 auto;
+  text-align: right;
+  border-bottom: 1px solid rgb(102, 51, 51);
+  font-size: 1.8rem;
+  font-weight: bold;
 }
 
 /*ワークス*/
+#works>h3{
+  display: flex;
+  align-items:center;
+}
 
+#works img{
+  border: 1px solid rgb(204, 204, 204);
+}
+
+.workp{
+  position: absolute;
+  top: 10px;
+  left: 10px;
+}
 
 /*コンタクト*/
+#contact>dl>dt:first-child{
+  margin-top: 30px;
+}
+
 #contact>dl{
   margin: 0 auto;
   width: fit-content;
@@ -190,14 +273,18 @@ footer>p{
     border-radius: 10px;
   }
 
-
   /* 見出し２ */
   h2{
     font: normal 3.0rem 'Bree Serif', serif;
+    padding: 0 0 10px 10px;
   }
 
   dd{
     margin-left: 20px;
+  }
+
+  #works h3,#works div,#contact p{
+    padding: 0 50px;
   }
 
   /*-* ヘッダー *-*-*-*-*-*-*-*-*-*-*-*/
@@ -209,7 +296,7 @@ footer>p{
 
   header>p{
     font: normal 2.0rem 'Bree Serif', serif;
-    top: 170px;
+    top: 190px;
     left: 400px;
     position: absolute;
   }
@@ -238,15 +325,34 @@ footer>p{
 
   /*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
   /*プロフ*/
+  #profile>div>img{
+    width: 200px;
+    height: 200px;
+    margin-right: 30px;
+  }
+
   #profile>div:nth-child(3){
     display: flex;
     justify-content:center;
     align-items:center;
   }
 
-  #profile div:nth-last-child(1){
+  #prfdiv{
     margin: 30px auto 0 auto;
-    width: 520px;
+    width: 64%;
+  }
+
+  #morearea>div:nth-last-child(2){
+    margin-top: 30px;
+    display: flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  #morearea>div:nth-last-child(2)>img{
+    margin-right: 30px;
+    width: 300px;
+    height: 200px;
   }
 
   /*スキル*/
@@ -255,7 +361,7 @@ footer>p{
     align-items:center;
     justify-content:flex-end;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #skill>div{
@@ -268,9 +374,10 @@ footer>p{
   }
 
   #skill dl{
+    margin-top: 5px;
     padding: 0 15px;
     border: 1px solid rgb(204, 204, 204);
-    background-image: url(images/paper.jpg);
+    background-image: url(images/p_h.jpg);
     box-shadow: 2px 2px 2px rgb(204, 204, 204);
     background-size: cover;
     width: 280px;
@@ -288,10 +395,8 @@ footer>p{
 
   /*ワークス*/
   #works>h3{
-    display: flex;
-    align-items:center;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #works>h3>a{
@@ -304,7 +409,7 @@ footer>p{
   }
 
   #works>div>dl{
-    margin: 0 20px;
+    margin-left: 20px;
   }
 
   #works dd{
@@ -312,9 +417,8 @@ footer>p{
   }
 
   #works img{
-    border: 1px solid rgb(204, 204, 204);
+    margin-top: 5px;
   }
-
 
   /*-* コンタクト *-*-*-*-*-*-*-*-*-*-*-*/
   #contact dt,#contact a{
@@ -332,7 +436,6 @@ footer>p{
 
   footer{
     height: 80px;
-    margin-top: 50px;
   }
 
   footer>p{
@@ -347,6 +450,7 @@ footer>p{
 @media screen and (min-width: 617px) and (max-width: 1024px) {
   #wrapper{
     width: 500px;
+    overflow-x: hidden;
   }
 
   /* TOPに戻るリンク */
@@ -363,7 +467,12 @@ footer>p{
 
     /* 見出し２ */
   h2{
+    padding: 0 0 10px 10px;
     font: normal 2.5rem 'Bree Serif', serif;
+  }
+
+  #works h3,#works div,#contact p{
+    padding: 0 50px;
   }
 
   /*-* ヘッダー *-*-*-*-*-*-*-*-*-*-*-*/
@@ -375,7 +484,7 @@ footer>p{
 
   header>p{
     font: normal 1.8rem 'Bree Serif', serif;
-    top: 100px;
+    top: 120px;
     right: 65px;
     position: absolute;
   }
@@ -414,6 +523,12 @@ footer>p{
 
   /*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
   /*プロフ*/
+  #profile>div>img{
+    width: 150px;
+    height: 150px;
+    margin-right: 30px;
+  }
+
   #profile>div:nth-child(3){
     display: flex;
     justify-content:center;
@@ -421,10 +536,28 @@ footer>p{
     flex-wrap:wrap;
   }
 
-  #profile div:nth-last-child(1){
+  #prfdiv{
     margin: 30px auto 0 auto;
     width: 80%;
   }
+  
+  #morearea>div:nth-last-child(2){
+    margin-top: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+
+  #morearea>div:nth-last-child(2)>img{
+    width: 80%;
+    height: 80%;
+  }
+
+  #morearea>div:nth-last-child(2)>dl{
+    margin-top: 30px;
+  }
+
 
   /*スキル*/
   #skill h3{
@@ -432,7 +565,7 @@ footer>p{
     align-items:center;
     justify-content:center;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #skill>div{
@@ -446,10 +579,14 @@ footer>p{
   }
 
   #skill dl{
+    margin-top: 5px;
     padding: 0 15px;
     border: 1px solid rgb(204, 204, 204);
+    background-image: url(images/p_h.jpg);
+    box-shadow: 2px 2px 2px rgb(204, 204, 204);
+    background-size: cover;
     width: 280px;
-    height: 350px;
+    height: 370px;
   }
 
   #skill dt{
@@ -467,7 +604,7 @@ footer>p{
     align-items:center;
     justify-content:center;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #works>h3>a{
@@ -481,7 +618,7 @@ footer>p{
   }
 
   #works>div>dl{
-    margin: 0 20px;
+    margin: 15px 20px 0 20px;
   }
 
   #works dd{
@@ -489,7 +626,7 @@ footer>p{
   }
 
   #works img{
-    border: 1px solid rgb(204, 204, 204);
+    margin-top: 5px;
   }
 
   #works>div>dl>dt:nth-child(1){
@@ -517,7 +654,6 @@ footer>p{
 
   footer{
     height: 80px;
-    margin-top: 50px;
   }
 
   footer>p{
@@ -531,7 +667,8 @@ footer>p{
 ====================================== */
 @media screen and (min-width: 0px) and (max-width: 616px) {
   #wrapper{
-    width: 100vw;
+    width: 100%;
+    overflow-x: hidden;
   }
 
     /* TOPに戻るリンク */
@@ -550,19 +687,25 @@ footer>p{
   h2{
     font: normal 2.5rem 'Bree Serif', serif;
     text-align: center;
-    width: 100vw;
+    width: 100%;
+    padding-bottom:10px;
   }
+
+  #works h3,#works div,#contact p{
+    padding: 0 15px;
+  }
+
 
   /*-* ヘッダー *-*-*-*-*-*-*-*-*-*-*-*/
   header>h1{
     font: normal 2.4rem 'Fredericka the Great', cursive;
-    top: 40px;
+    top: 35px;
     right: 12px;
   }
 
   header>p{
     font: normal 1.4rem 'Bree Serif', serif;
-    top: 70px;
+    top: 80px;
     right: 15px;
     position: absolute;
   }
@@ -601,6 +744,11 @@ footer>p{
 
   /*-* メイン *-*-*-*-*-*-*-*-*-*-*-*/
   /*プロフ*/
+  #profile>div>img{
+    width: 200px;
+    height: 200px;
+  }
+
   #profile>div:nth-child(3){
     display: flex;
     justify-content:center;
@@ -616,9 +764,30 @@ footer>p{
     display: none;
   }
 
-  #profile div:nth-last-child(1){
+  #prfdiv{
     margin: 30px auto 0 auto;
     width: 80%;
+  }
+
+  #morearea>div:nth-last-child(2){
+    margin-top: 30px;
+    display: flex;
+    flex-wrap:wrap;
+    justify-content:center;
+    align-items:center;
+  }
+
+  #morearea>div:nth-last-child(2)>img{
+    width: 80%;
+    height: 80%;
+  }
+
+  #morearea>div:nth-last-child(2)>dl{
+    margin-top: 30px;
+  }
+
+  #morearea>h3{
+    text-align: center;
   }
 
   /*スキル*/
@@ -627,7 +796,7 @@ footer>p{
     align-items:center;
     justify-content:center;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #skill>div{
@@ -641,10 +810,13 @@ footer>p{
   }
 
   #skill dl{
+    margin-top: 5px;
     padding: 0 15px;
     border: 1px solid rgb(204, 204, 204);
+    background-image: url(images/p_h.jpg);
+    box-shadow: 2px 2px 2px rgb(204, 204, 204);
+    background-size: cover;
     width: 280px;
-    height: 350px;
   }
 
   #skill dt{
@@ -662,7 +834,7 @@ footer>p{
     align-items:center;
     justify-content:center;
     font-size: 2.0rem;
-    margin: 30px 0 5px 0;
+    margin-top: 30px;
   }
 
   #works>h3>a{
@@ -684,7 +856,7 @@ footer>p{
   }
 
   #works img{
-    border: 1px solid rgb(204, 204, 204);
+    margin-top: 5px;
   }
 
   #works>div>dl>dt:nth-child(1){
@@ -712,7 +884,6 @@ footer>p{
 
   footer{
     height: 80px;
-    margin-top: 50px;
   }
 
   footer>p{

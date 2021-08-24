@@ -38,9 +38,34 @@
               <dd>-猫飼う/コミケでる</dd>
             </dl>
           </div>
-          <div>
+          <div id="prfdiv">
             <p>　システム開発会社にテスターとして入社。約6年間、テストケースの作成からテスト実施、アルバイトのテスト進行管理などの業務に従事。</p>
             <p>　プログラマに憧れ、北関東学院にてPHP/JSを学習。書籍による独学と並行し、テストでも優秀な成績を収めて令和3年11月卒業（予定）</p>
+          </div>
+          <div id="more_d">
+            <p id="more_p">More</p>
+          </div>
+          <div id="morearea" class="onnone">
+            <h3><i class="fas fa-pencil-alt fa-fw"></i>プログラマを目指す理由</h3>
+            <div>
+              <p>　テスターとして勤務するも、キャリアプランが見えない不安から疲弊し、人生ひと休みのため退職。その間しっかりと自分と向き合い、見つめ直した結果、以下に気が付く。</p>
+              <p class="pspan">&#9702;プログラマが真剣にソースコードに向き合う姿は格好良く、<span>憧れていた</span><br>&#9702;今まで抱えていたネガティブな感情の根っこは、憧れからくる劣等感や疎外感だった。自分も肩を並べ、<span>あの情熱を共有する一員になりたかった</span></p>
+              <p>　入社当初からプログラミングへの興味はあったものの、目先の業務に手いっぱいで、自分がプログラマを目指すなんて考えもしなかった。</p>
+              <p>　もっと早く自覚できていれば……という後悔もあるが、この時間を無駄にしないため、また、今を逃せばチャンスはないと思ったため、プログラマを目指すことを決意した。</p>
+            </div>
+            <div>
+              <img src="images/prfimg.jpg" alt="プロフィール詳細挿絵">
+              <dl>
+                <dt>好きなエディタ</dt>
+                <dd>-Visual Studio Codeしか勝たん</dd>
+                <dt>好きなうまい棒</dt>
+                <dd>-チョコ/なっとう/カレー　稀にたこ焼き</dd>
+                <dt>今後挑戦したいこと</dt>
+                <dd>-unityと3Dを学習し、ホラゲー作って売る</dd>
+                <dd>-宝物のミニノートPC（kawaii）にLinux入れて使う</dd>
+              </dl>
+            </div>
+            <p id="more_c">Close</p>
           </div>
         </section>
 
@@ -84,17 +109,18 @@
           <h2><i class="fas fa-list-ul fa-fw"></i>Works</h2>
           <h3>
             ポートフォリオ（ここ）
-            <a href=""><i class="fab fa-github-alt fa-fw"></i></a>
+            <a href="https://github.com/F-01-57suki/hgsk"><i class="fab fa-github-alt fa-fw"></i></a>
           </h3>
           <div>
-            <img src="images/ptf.jpg" alt="ポートフォリオ（ここ）">
+            <p class="workp">あいうえお<br>あいうえお</p>
+            <img src="images/ptf.jpg" alt="ポートフォリオ（ここ）" class="workimg">
             <dl>
               <dt>
                 <a href="http://crimsonscar.html.xdomain.jp/">http://crimsonscar.html.xdomain.jp/</a>
                 <a href="http://crimsonscar.html.xdomain.jp/" target="_blank"><i class="far fa-window-restore"></i></a>
               </dt>
               <dt>ホームページ（レスポンシブ対応）</dt>
-              <dt>-HTML5/CSS3</dt>
+              <dt>-HTML5/CSS3/JS</dt>
               <dd>
                 　シンプルに見やすく、それでいて見栄えよくを意識してデザイン。<br>
                 　入れ子のルールなど基本を守ること、レスポンシブの対応を意識してコーディングした。
@@ -103,10 +129,10 @@
           </div>
           <h3>
             ゲームレビューサイト
-            <a href=""><i class="fab fa-github-alt fa-fw"></i></a>
+            <a href="https://github.com/F-01-57suki/portfolio"><i class="fab fa-github-alt fa-fw"></i></a>
           </h3>
           <div>
-            <img src="images/hgsk.jpg" alt="ゲームレビューサイト">
+            <img src="images/hgsk.jpg" alt="ゲームレビューサイト" class="workimg">
             <dl>
               <dt>
                 <a href="http://crimsonscar.html.xdomain.jp/hgsk/">http://crimsonscar.html.xdomain.jp/hgsk/</a>
@@ -147,5 +173,47 @@
         </a>
       </div>
     </footer>
+    <script>
+      const more_p=document.getElementById("more_p");
+      const more_c=document.getElementById("more_c");
+      const morearea=document.getElementById("morearea");
+      const workimg=document.getElementsByClassName("workimg");
+      let moreflag=0;
+
+      function more(){
+        if(moreflag==0){
+          morearea.style.display="block";
+          moreflag=1;
+          more_p.innerHTML="Close";
+        }
+        else{
+          morearea.style.display="none";
+          moreflag=0;
+          more_p.innerHTML="More";
+        }
+      }
+
+      more_p.onclick=more;
+      more_c.onclick=more;
+
+      for(let i=0;i<workimg.length;i++){
+        workimg[i].onmouseover=function(){
+          for(let j=0;i<workimg.length;j++){
+            if(i==j){
+              workimg[j].style.opacity="0.5";
+              break;
+            }
+          }
+        }
+        workimg[i].onmouseout=function(){
+          for(let j=0;i<workimg.length;j++){
+            if(i==j){
+              workimg[j].style.opacity="1";
+              break;
+            }
+          }
+        }
+      }
+    </script>
   </body>
 </html>
