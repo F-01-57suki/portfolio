@@ -53,7 +53,7 @@ a{
 }
 
 a:hover{
-  color: rgb(51, 0, 0);
+  color: rgb(204, 153, 153);
 }
 
 /* TOPに戻るリンク */
@@ -71,6 +71,7 @@ a:hover{
   color: rgba(255, 255, 255);
   background-color: rgba(0, 0, 0, 0.5);
   display: block;
+  box-shadow: 1px 0 0 0 rgb(255, 255, 255), 0 1px 0 0 rgb(255, 255, 255), -1px 0 0 0 rgb(255, 255, 255), 0 -1px 0 0 rgb(255, 255, 255);
 }
 
 .gotop>a:hover{
@@ -119,6 +120,8 @@ nav ul{
 }
 
 nav a:hover{
+  color: rgb(153, 102, 102);
+  text-shadow: 1px 0 0 rgb(255, 255, 255), 0 1px 0 rgb(255, 255, 255), -1px 0 0 rgb(255, 255, 255), 0 -1px 0 rgb(255, 255, 255);
   background-color: rgba(153, 102, 102, 0.3);
 }
 
@@ -212,19 +215,39 @@ nav a:hover{
 }
 
 /*ワークス*/
+#works a{
+  text-decoration: underline;
+}
+
 #works>h3{
   display: flex;
   align-items:center;
 }
 
-#works img{
+.workimg{
   border: 1px solid rgb(204, 204, 204);
+  z-index: 0;
+}
+
+#works .wimgb{
+  margin: 5px 0 0;
+  padding: 0;
+  background: rgb(255, 255, 255);
 }
 
 .workp{
+  color: rgb(255, 255, 255);
   position: absolute;
-  top: 10px;
-  left: 10px;
+  display: none;
+  font: normal 3.5rem 'Fredericka the Great', cursive;
+  text-shadow: 1px 1px 1px rgb(0, 0, 0);
+  top: 80px;
+  left: 100px;
+  z-index: 1;
+}
+
+.workarea{
+  position: static;
 }
 
 /*コンタクト*/
@@ -283,7 +306,7 @@ footer>p{
     margin-left: 20px;
   }
 
-  #works h3,#works div,#contact p{
+  #works h3,#works div,#contact>p,#works>p{
     padding: 0 50px;
   }
 
@@ -416,10 +439,6 @@ footer>p{
     margin-top: 15px;
   }
 
-  #works img{
-    margin-top: 5px;
-  }
-
   /*-* コンタクト *-*-*-*-*-*-*-*-*-*-*-*/
   #contact dt,#contact a{
     font-size: 1.8rem;
@@ -471,7 +490,7 @@ footer>p{
     font: normal 2.5rem 'Bree Serif', serif;
   }
 
-  #works h3,#works div,#contact p{
+  #works h3,#works div,#contact>p,#works>p{
     padding: 0 50px;
   }
 
@@ -625,10 +644,6 @@ footer>p{
     margin-top: 15px;
   }
 
-  #works img{
-    margin-top: 5px;
-  }
-
   #works>div>dl>dt:nth-child(1){
     display: none;
   }
@@ -691,7 +706,7 @@ footer>p{
     padding-bottom:10px;
   }
 
-  #works h3,#works div,#contact p{
+  #works h3,#works div,#contact>p,#works>p{
     padding: 0 15px;
   }
 
@@ -853,10 +868,6 @@ footer>p{
 
   #works dd{
     margin-top: 15px;
-  }
-
-  #works img{
-    margin-top: 5px;
   }
 
   #works>div>dl>dt:nth-child(1){
