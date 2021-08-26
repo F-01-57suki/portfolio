@@ -107,39 +107,43 @@
 
         <section id="works">
           <h2><i class="fas fa-list-ul fa-fw"></i>Works</h2>
-          <h3>
-            ポートフォリオ（ここ）
-            <a href="https://github.com/F-01-57suki/hgsk"><i class="fab fa-github-alt fa-fw"></i></a>
-          </h3>
+          <p>サムネイルからGitHubのリポジトリへ飛べます。</p>
+          <h3>ポートフォリオ（ここ）</h3>
           <div>
-            <p class="workp">あいうえお<br>あいうえお</p>
-            <img src="images/ptf.jpg" alt="ポートフォリオ（ここ）" class="workimg">
+            <div class="wimgb">
+              <a href="https://github.com/F-01-57suki/hgsk">
+                <p class="workp"><i class="fab fa-github fa-fw"></i>GitHub</p>
+                <img src="images/ptf.jpg" alt="ポートフォリオ（ここ）" class="workimg">
+              </a>
+            </div>
             <dl>
               <dt>
                 <a href="http://crimsonscar.html.xdomain.jp/">http://crimsonscar.html.xdomain.jp/</a>
                 <a href="http://crimsonscar.html.xdomain.jp/" target="_blank"><i class="far fa-window-restore"></i></a>
               </dt>
               <dt>ホームページ（レスポンシブ対応）</dt>
-              <dt>-HTML5/CSS3/JS</dt>
+              <dt>-HTML5/CSS3/JS/jQuery</dt>
               <dd>
                 　シンプルに見やすく、それでいて見栄えよくを意識してデザイン。<br>
                 　入れ子のルールなど基本を守ること、レスポンシブの対応を意識してコーディングした。
               </dd>
             </dl>
           </div>
-          <h3>
-            ゲームレビューサイト
-            <a href="https://github.com/F-01-57suki/portfolio"><i class="fab fa-github-alt fa-fw"></i></a>
-          </h3>
+          <h3>ゲームレビューサイト</h3>
           <div>
-            <img src="images/hgsk.jpg" alt="ゲームレビューサイト" class="workimg">
+            <div class="wimgb">
+              <a href="https://github.com/F-01-57suki/portfolio">
+                <p class="workp"><i class="fab fa-github fa-fw"></i>GitHub</p>
+                <img src="images/hgsk.jpg" alt="ゲームレビューサイト" class="workimg">
+              </a>
+            </div>
             <dl>
               <dt>
                 <a href="http://crimsonscar.html.xdomain.jp/hgsk/">http://crimsonscar.html.xdomain.jp/hgsk/</a>
                 <a href="http://crimsonscar.html.xdomain.jp/hgsk/" target="_blank"><i class="far fa-window-restore"></i></a>
               </dt>
               <dt>ホームページ（レスポンシブ対応）</dt>
-              <dt>-HTML5/CSS3/JS</dt>
+              <dt>-HTML5/CSS3/JS/jQuery</dt>
               <dd>
                 　訓練校で習ったタグやプロパティを幅広く活用し、応用にも挑戦。授業の理解度を確認し、さらに深めた。<br>
                 　雰囲気やデザインにもこだわり、小規模ながらしっかりとした作りのサイトを目指した。
@@ -173,46 +177,53 @@
         </a>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
+      //Profileのmore開閉
       const more_p=document.getElementById("more_p");
-      const more_c=document.getElementById("more_c");
-      const morearea=document.getElementById("morearea");
-      const workimg=document.getElementsByClassName("workimg");
       let moreflag=0;
 
-      function more(){
+      $("#more_p,#more_c").click(function(){
         if(moreflag==0){
-          morearea.style.display="block";
+          $("#morearea").slideDown("fast","swing");
           moreflag=1;
           more_p.innerHTML="Close";
         }
         else{
-          morearea.style.display="none";
+          $("#morearea").slideUp("fast","swing");
           moreflag=0;
           more_p.innerHTML="More";
         }
-      }
+      });
 
-      more_p.onclick=more;
-      more_c.onclick=more;
+      //Worksの画像効果
+      const workimg=document.getElementsByClassName("workimg");
+      const workp=document.getElementsByClassName("workp");
+      const wimgb=document.getElementsByClassName("wimgb");
 
-      for(let i=0;i<workimg.length;i++){
-        workimg[i].onmouseover=function(){
-          for(let j=0;i<workimg.length;j++){
+      for(let i=0;i<wimgb.length;i++){
+        $(".wimgb").eq(i).on("mouseenter",function(){
+          for(let j=0;j<wimgb.length;j++){
             if(i==j){
-              workimg[j].style.opacity="0.5";
+              wimgb[j].style.position="relative";
+              wimgb[j].style.backgroundColor="rgb(0,0,0)";
+              $(".workimg").eq(j).fadeTo("fast",0.5,"linear");
+              $(".workp").eq(j).fadeIn("fast","linear");
               break;
             }
           }
-        }
-        workimg[i].onmouseout=function(){
-          for(let j=0;i<workimg.length;j++){
+        });
+        $(".wimgb").eq(i).on("mouseleave",function(){
+          for(let j=0;j<wimgb.length;j++){
             if(i==j){
-              workimg[j].style.opacity="1";
+              wimgb[j].style.position="static";
+              wimgb[j].style.backgroundColor="rgb(255,255,255)";
+              $(".workimg").eq(j).fadeTo("fast",1,"linear");
+              $(".workp").eq(j).fadeOut("fast","linear");
               break;
             }
           }
-        }
+        });
       }
     </script>
   </body>
