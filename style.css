@@ -214,6 +214,45 @@ nav a:hover{
   font-weight: bold;
 }
 
+/*スキル*/
+#skill dl{
+  margin-top: 5px;
+  padding: 0 15px;
+  border: 1px solid rgb(204, 204, 204);
+  background-image: url(images/p_h.jpg);
+  box-shadow: 2px 2px 2px rgb(204, 204, 204);
+  background-size: cover;
+  width: 280px;
+  height: 370px;
+}
+
+#skill dt{
+  margin-top: 15px;
+  font-weight: bold;
+}
+
+#skill dd{
+  margin-left: 15px;
+}
+
+#stbl{
+  margin-top: 5px;
+  border: 1px solid rgb(204, 204, 204);
+  background-image: url(images/p_h.jpg);
+  box-shadow: 2px 2px 2px rgb(204, 204, 204);
+  background-size: cover;
+  width: 280px;
+  height: 370px;
+}
+#stbl th{
+  padding: 15px 15px 0;
+  text-align: left;
+}
+#stbl td{
+  padding: 0 15px 0 30px;
+  text-align: left;
+}
+
 /*ワークス*/
 #works a{
   text-decoration: underline;
@@ -396,26 +435,6 @@ footer>p{
     margin: 0 20px;
   }
 
-  #skill dl{
-    margin-top: 5px;
-    padding: 0 15px;
-    border: 1px solid rgb(204, 204, 204);
-    background-image: url(images/p_h.jpg);
-    box-shadow: 2px 2px 2px rgb(204, 204, 204);
-    background-size: cover;
-    width: 280px;
-    height: 370px;
-  }
-
-  #skill dt{
-    margin-top: 15px;
-    font-weight: bold;
-  }
-
-  #skill dd{
-    margin-left: 15px;
-  }
-
   /*ワークス*/
   #works>h3{
     font-size: 2.0rem;
@@ -595,26 +614,6 @@ footer>p{
 
   #skill>div>div{
     margin: 0 20px;
-  }
-
-  #skill dl{
-    margin-top: 5px;
-    padding: 0 15px;
-    border: 1px solid rgb(204, 204, 204);
-    background-image: url(images/p_h.jpg);
-    box-shadow: 2px 2px 2px rgb(204, 204, 204);
-    background-size: cover;
-    width: 280px;
-    height: 370px;
-  }
-
-  #skill dt{
-    margin-top: 15px;
-    font-weight: bold;
-  }
-
-  #skill dd{
-    margin: 0 15px;
   }
 
   /*ワークス*/
@@ -822,25 +821,6 @@ footer>p{
 
   #skill>div>div{
     margin: 0 20px;
-  }
-
-  #skill dl{
-    margin-top: 5px;
-    padding: 0 15px;
-    border: 1px solid rgb(204, 204, 204);
-    background-image: url(images/p_h.jpg);
-    box-shadow: 2px 2px 2px rgb(204, 204, 204);
-    background-size: cover;
-    width: 280px;
-  }
-
-  #skill dt{
-    margin-top: 15px;
-    font-weight: bold;
-  }
-
-  #skill dd{
-    margin: 0 15px;
   }
 
   /*ワークス*/
