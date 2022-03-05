@@ -5,14 +5,24 @@
     <meta name="viewport" content="initial-scale=1.0">
     <title>MIYASHITA PORTFOLIO</title>
     <link rel="stylesheet" href="style.css">
-    <link href="https://use.fontawesome.com/releases/v5.6.1/css/all.css" rel="stylesheet">
+    <!-- lfontawesome -->
+    <script src="https://kit.fontawesome.com/58a34827d1.js" crossorigin="anonymous"></script>
+    <!-- lightbox -->
+    <link href="lightbox/lightbox.min.css" rel="stylesheet">
+    <script src="lightbox/lightbox-plus-jquery.min.js"></script>
+    <script>
+      lightbox.option({
+        'resizeDuration': 200,
+        'wrapAround': true
+      })
+  </script>
   </head>
   <body>
     <div id="wrapper">
       <header>
         <img src="images/top.jpg" alt="TOP画像">
         <h1>MIYASHITA PORTFOLIO</h1>
-        <p>Web Engineer/Game Creator</p>
+        <p>Web/Graphic/Game Designer</p>
       </header>
       <nav>
         <ul>
@@ -33,35 +43,39 @@
               <dt>北海道札幌市（在住）</dt>
               <dt>平成2年7月14日生</dt>
               <dt>お勉強中</dt>
-              <dd>-PHP/JavaScript</dd>
+              <dd>-Flutter/React</dd>
               <dt>将来の夢</dt>
-              <dd>-猫飼う/賞与で焼肉</dd>
+              <dd>-猫飼う/Vtuberなる</dd>
             </dl>
           </div>
           <div id="prfdiv">
             <p>　システム開発会社にテスターとして入社。約6年間、テストケースの作成からテスト実施、アルバイトのテスト進行管理などの業務に従事。</p>
-            <p>　プログラマに憧れ、北関東学院にてPHP/JSを学習。書籍による独学と並行し、テストでも優秀な成績を収めて令和3年11月卒業（予定）</p>
+            <p>　北関東学院にて、JavaScript/PHP/MySQLを学習。テストでも優秀な成績を収めて令和3年11月卒業。</p>
           </div>
           <div id="more_d">
             <p id="more_p">More</p>
           </div>
           <div id="morearea" class="onnone">
-            <h3><i class="fas fa-pencil-alt fa-fw"></i>プログラマを目指す理由</h3>
+            <h3><i class="fas fa-pencil-alt fa-fw"></i>エンジニアを目指す理由</h3>
             <div>
-              <p>　テスターとして勤務するも、キャリアプランが見えない不安から疲弊し、人生ひと休みのため退職。<br>　自分とじっくり向き合い、これまでの人生を見つめ直した結果、以下のことに気が付いた。</p>
-              <p class="pspan"><i class="far fa-lightbulb fa-fw"></i>プログラマが真剣にソースコードに向き合う姿は格好良く、<span>憧れていた</span><br><i class="far fa-lightbulb fa-fw"></i>ネガティブな感情の根っこは、憧れからくる劣等感や疎外感だった。自分も肩を並べ、<span>あの情熱を共有する一員になりたかった</span><br><i class="far fa-lightbulb fa-fw"></i>自分の手で成果物を作り出したい、<span>作り手側になりたい！</span></p>
-              <p>　プログラミングに興味はあったものの、目先のことに手いっぱいで、学習しようとは思い至らなかった。<br>　遠回りをしてしまったが、やっと見つけた目標。年齢からも、これが最後のチャンスかもしれない！と一念発起し、プログラマを目指すことを決意した。</p>
+              <p>　約6年間テスターとして勤務するも、社内でのキャリアパスがないことから転職を決意。<br>　自分とじっくり向き合い、どうしたいかを考えた結果、以下のことに気が付いた。</p>
+              <p class="pspan">
+                <i class="far fa-lightbulb fa-fw"></i>エンジニアが真剣にコードと向き合う姿は、<span>熱くてかっこいい！</span><br>
+                <i class="far fa-lightbulb fa-fw"></i>見ているだけじゃつまらない、<span>私も作り手側になりたい！</span><br>
+                <i class="far fa-lightbulb fa-fw"></i>自分と、自分の人生を諦めかけていた。<span>そんな自分を変えたい！</span>
+              </p>
+              <p>　今までプログラミングやコーディングに興味はあったものの、目先のことに手いっぱいで、学習には至らなかった。<br>　年齢からも、これが最後のチャンスかもしれない！と一念発起し、エンジニアを目指すことを決意。</p>
             </div>
             <div>
               <img src="images/prfimg.jpg" alt="プロフィール詳細挿絵">
               <dl>
                 <dt>好きなエディタ</dt>
                 <dd>-Visual Studio Codeしか勝たん</dd>
-                <dt>好きなうまい棒</dt>
-                <dd>-チョコ/なっとう/カレー　時々たこ焼き</dd>
+                <dt>好きな命令</dt>
+                <dd>-div/p（HTML）、die（PHP）、const（JS）</dd>
                 <dt>今後挑戦したいこと</dt>
-                <dd>-unityと3Dを学習し、ホラゲー作って売る</dd>
-                <dd>-宝物のミニPC（kawaii）にLinux入れて使う</dd>
+                <dd>-unityと3Dを学習し、ホラゲーを作る</dd>
+                <dd>-宝物のミニPC（kawaii）にLinux入れる</dd>
               </dl>
             </div>
             <p id="more_c">Close</p>
@@ -90,13 +104,13 @@
             <div>
               <h3><i class="fas fa-tools fa-fw"></i>ツール</h3>
               <dl>
-                <dt>DB管理ツール</dt>
+                <dt>開発関連</dt>
                 <dd>-phpMyAdmin</dd>
-                <dt>ビジネスチャット</dt>
-                <dd>-slack/Chatwork/Skype</dd>
-                <dt>オフィスソフト</dt>
+                <dd>-SourceTree/Android Studio</dd>
+                <dt>ビジネスツール</dt>
+                <dd>-slack/LINE WORKS/Zoom...</dd>
+                <dt>オフィス</dt>
                 <dd>-Word/Excel/PowerPoint</dd>
-                <dd>-Open Office</dd>
                 <dd>-Googleスプレッドシート</dd>
                 <dt>その他</dt>
                 <dd>-画像編集（Photoshop他）</dd>
@@ -108,9 +122,11 @@
 
         <section id="works">
           <h2><i class="fas fa-list-ul fa-fw"></i>Works</h2>
-          <p>詳細はGitHubのREADMEに記載。（サムネイルから飛べます）</p>
-
-          <h3><i class="fab fa-php fa-fw"></i> ブラウザゲーム（ホラーテキストRPG）</h3>
+          <div class="wmenu">
+            <a href="#wmenu_code"><i class="fa-regular fa-file-code"></i></a>
+            <a href="#wmenu_image"><i class="fa-regular fa-file-image"></i></a>
+          </div>
+          <h3 id="wmenu_code"><i class="fab fa-php fa-fw"></i> ブラウザゲーム（ホラーテキストRPG）</h3>
           <div>
             <div class="wimgb">
               <a href="https://github.com/F-01-57suki/aofh">
@@ -126,7 +142,7 @@
               <dt>ブラウザゲーム</dt>
               <dt>-PHP7/HTML5/CSS3/JS</dt>
               <dd>
-                　随時更新中！（現在は一通り動く状態、調整や機能の追加中）<br>
+                　選択肢を選んでマップを進み、ゴールを目指すテキストRPG。<br>
                 　詳細はGitHubのREADMEか、<a href="https://docs.google.com/spreadsheets/d/1BrBSshVTCp64pC4j-CoL7JSLQ-Z7XwNmtkTqi2f1U08/edit?usp=sharing">Googleスプレッドシートの仕様書</a>にて記載。
               </dd>
             </dl>
@@ -247,7 +263,7 @@
           <h3><i class="fab fa-js fa-fw"></i> ゲームレビューサイト</h3>
           <div>
             <div class="wimgb">
-              <a href="https://github.com/F-01-57suki/portfolio">
+              <a href="https://github.com/F-01-57suki/hgsk">
                 <p class="workp"><i class="fab fa-github fa-fw"></i>GitHub</p>
                 <img src="images/hgsk.jpg" alt="ゲームレビューサイト" class="workimg">
               </a>
@@ -264,6 +280,19 @@
                 　雰囲気やデザインにもこだわり、小規模ながらしっかりとした作りのサイトを目指した。
               </dd>
             </dl>
+          </div>
+
+          <h3 id="wmenu_image"><i class="fa-solid fa-images"></i> グラフィックデザイン</h3>
+          <div class="design">
+            <a href="images/design1.jpg" data-lightbox="simple-group"><img src="images/design1.jpg" alt="ロゴデザイン" class="d_big"></a>
+            <a href="images/design3.jpg" data-lightbox="simple-group"><img src="images/design3.jpg" alt="画面デザイン" class="d_sml"></a>
+            <a href="images/design4.jpg" data-lightbox="simple-group"><img src="images/design4.jpg" alt="名刺デザイン" class="d_sml"></a>
+            <a href="images/design2.jpg" data-lightbox="simple-group"><img src="images/design2.jpg" alt="ロゴデザイン" class="d_sml"></a>
+            <a href="images/design5.png" data-lightbox="simple-group"><img src="images/design5.png" alt="キャラデザイン" class="d_sml"></a>
+            <a href="images/design6.jpg" data-lightbox="simple-group"><img src="images/design6.jpg" alt="画面デザイン" class="d_sml"></a>
+            <a href="images/design7.jpg" data-lightbox="simple-group"><img src="images/design7.jpg" alt="画面デザイン" class="d_sml"></a>
+            <a href="images/design8.jpg" data-lightbox="simple-group"><img src="images/design8.jpg" alt="名刺デザイン" class="d_sml"></a>
+            <a href="images/design9.jpg" data-lightbox="simple-group"><img src="images/design9.jpg" alt="画面デザイン" class="d_sml"></a>
           </div>
         </section>
 
@@ -292,6 +321,7 @@
         </a>
       </div>
     </footer>
+    <!-- jquery -->
     <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
     <script>
       //Profileのmore開閉
